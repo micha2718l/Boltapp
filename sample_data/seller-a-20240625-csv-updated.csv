@@ -1,0 +1,6 @@
+product_id,description,thread_size,material,finish,quantity,price,category
+A001,"M10-1.5 X 100 HCS DIN 931 8.8 PLN","M10-1.5","Steel","Plain",500,0.75,"Hex Cap Screw"
+A002,"1/4-20 X 2 GR5 TEF BLU HEX HEAD CAP SC","1/4-20","Steel","Teflon Blue",1000,0.50,"Hex Cap Screw"
+A003,"M12-1.75 X 220 HCS DIN 931 10.9 PLN","M12-1.75","Steel","Plain",750,1.25,"Hex Cap Screw"
+A004,"M14-2 X 80 HCS DIN 931 8.8 ZC","M14-2","Steel","Zinc",600,1.10,"Hex Cap Screw"
+A005,"M8-1.25 X 60 HCS DIN 931 8.8 ZC","M8-1.25","Steel","Zinc",1200,0.40,"Hex Cap Screw"

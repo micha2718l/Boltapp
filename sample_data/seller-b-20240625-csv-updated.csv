@@ -1,0 +1,6 @@
+item_number,product_name,threading,composition,surface_treatment,stock,unit_cost,product_category
+B001,"M12-1.75 X 220 HCS DIN 931 10.9 PLN","M12-1.75","Steel","Plain",700,1.30,"Hex Cap Screw"
+B002,"1-8 X 1 3/4 HEX CAP SCREW GR 5 ZC","1-8","Steel","Zinc",250,2.00,"Hex Cap Screw"
+B003,"1/4-20 X 2 1/4 HEX CAP SCREW GR 2 STL PLN MANUFACTURED","1/4-20","Steel","Plain",1500,0.35,"Hex Cap Screw"
+B004,"1/4-20 X 1/2 HEX CAP SCREW ALUM","1/4-20","Aluminum","None",2000,0.30,"Hex Cap Screw"
+B005,"1/4-20 X 5-1/4 HEX CAP SCREW GR 5 PLN","1/4-20","Steel","Plain",600,0.70,"Hex Cap Screw"
