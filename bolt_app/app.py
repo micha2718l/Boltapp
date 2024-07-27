@@ -1,4 +1,4 @@
-from bolt_app import create_app, db
+from . import create_app, db
 from .models import Fastener, Seller
 
 app = create_app()

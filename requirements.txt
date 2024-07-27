@@ -4,3 +4,4 @@ SQLAlchemy
 flask_sqlalchemy
 sqlalchemy-cockroachdb
 psycopg2-binary
+pymysql
