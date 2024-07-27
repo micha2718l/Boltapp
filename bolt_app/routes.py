@@ -29,7 +29,8 @@ def get_fasteners():
 
 @main.route("/sellers", methods=["GET"])
 def get_sellers():
-    sellers = Seller.query.order_by("id").asc().all()
+    # For simplicity, we will always sort by name
+    sellers = Seller.query.order_by(getattr(Seller, "name").asc()).all()
 
     return jsonify([seller.to_dict() for seller in sellers])
 
