@@ -1,4 +1,4 @@
-from . import db
+from bolt_app import db
 
 
 class Fastener(db.Model):

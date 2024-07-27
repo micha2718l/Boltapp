@@ -1,7 +1,7 @@
 import re
 import pandas as pd
 from .models import Fastener, Seller
-from . import db
+from bolt_app import db
 
 
 def read_name_and_df(filename):
