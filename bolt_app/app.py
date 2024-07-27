@@ -25,6 +25,7 @@ if __name__ == "__main__":
                     material="Steel",
                     finish="Zinc",
                     seller=sellers[0],
+                    external_sku="whatever",
                 ),
                 Fastener(
                     category="Screw",
@@ -32,6 +33,7 @@ if __name__ == "__main__":
                     material="Steel",
                     finish="Zinc",
                     seller=sellers[0],
+                    price=1.42,
                 ),
                 Fastener(
                     category="Nut",
