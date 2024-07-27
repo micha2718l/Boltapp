@@ -60,12 +60,12 @@ def ingest_file(filename):
     name, df = read_name_and_df(filename)
 
     db.create_all()
-    if not Seller.query.filter(Seller.name.is_(name)).first():
+    if not Seller.query.filter_by(name=name).first():
         seller = Seller(name=name)
 
         db.session.add(seller)
     else:
-        seller = Seller.query.filter(Seller.name.is_(name)).first()
+        seller = Seller.query.filter_by(name=name).first()
     fasteners = df_to_model_list(df, seller)
     db.session.add_all(fasteners)
     db.session.commit()

@@ -1,4 +1,6 @@
 pandas
 Flask
 SQLAlchemy
-Flask - SQLAlchemy
+flask_sqlalchemy
+sqlalchemy-cockroachdb
+psycopg2-binary

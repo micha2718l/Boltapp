@@ -13,8 +13,10 @@ if __name__ == "__main__":
                 Seller(name="A"),
                 Seller(name="B"),
             ]
-            db.session.bulk_save_objects(sellers)
+            db.session.add_all(sellers)
             db.session.commit()
+        else:
+            sellers = Seller.query.all()
         if not Fastener.query.first():
             fasteners = [
                 Fastener(
@@ -22,31 +24,31 @@ if __name__ == "__main__":
                     thread_size=10,
                     material="Steel",
                     finish="Zinc",
-                    seller_id=1,
+                    seller=sellers[0],
                 ),
                 Fastener(
                     category="Screw",
                     thread_size=10,
                     material="Steel",
                     finish="Zinc",
-                    seller_id=1,
+                    seller=sellers[0],
                 ),
                 Fastener(
                     category="Nut",
                     thread_size=10,
                     material="Steel",
                     finish="Zinc",
-                    seller_id=2,
+                    seller=sellers[1],
                 ),
                 Fastener(
                     category="Washer",
                     thread_size=10,
                     material="Steel",
                     finish="Zinc",
-                    seller_id=2,
+                    seller=sellers[1],
                 ),
             ]
-            db.session.bulk_save_objects(fasteners)
+            db.session.add_all(fasteners)
             db.session.commit()
 
     app.run(debug=True)
