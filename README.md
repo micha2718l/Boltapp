@@ -45,3 +45,78 @@ The default sort is by category in an ascending order.
 
 The equivalent `curl` command would be:
 `curl --location 'http://127.0.0.1:5000/fasteners'`
+
+# Current Deployment
+
+There is a current "production" deploy of this code which has has the 3 "migration" files run against it.
+This app is currently deployed on PythonAnywhere with use of their hosted mySQL db service at the address:
+
+`https://boltapp.pythonanywhere.com/`
+
+This allows requests like:
+
+`https://boltapp.pythonanywhere.com/fasteners?sort=finish:asc`
+
+Sample output from request:
+GET `https://boltapp.pythonanywhere.com/fasteners?sort=finish:asc`:
+RESPONSE
+
+```
+[
+  {
+    "category": "Hex Cap Screw",
+    "finish": "Plain",
+    "id": 1,
+    "material": "Steel",
+    "seller": {
+      "id": 1,
+      "name": "a"
+    },
+    "thread_size": "M10-1.5"
+  },
+  {
+    "category": "Hex Cap Screw",
+    "finish": "Plain",
+    "id": 3,
+    "material": "Steel",
+    "seller": {
+      "id": 1,
+      "name": "a"
+    },
+    "thread_size": "M12-1.75"
+  },
+  {
+    "category": "Hex Cap Screw",
+    "finish": "Teflon Blue",
+    "id": 2,
+    "material": "Steel",
+    "seller": {
+      "id": 1,
+      "name": "a"
+    },
+    "thread_size": "1/4-20"
+  },
+  {
+    "category": "Hex Cap Screw",
+    "finish": "Zinc",
+    "id": 4,
+    "material": "Steel",
+    "seller": {
+      "id": 1,
+      "name": "a"
+    },
+    "thread_size": "M14-2"
+  },
+  {
+    "category": "Hex Cap Screw",
+    "finish": "Zinc",
+    "id": 5,
+    "material": "Steel",
+    "seller": {
+      "id": 1,
+      "name": "a"
+    },
+    "thread_size": "M8-1.25"
+  }
+]
+```
