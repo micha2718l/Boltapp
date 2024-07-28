@@ -53,6 +53,40 @@ This app is currently deployed on PythonAnywhere with use of their hosted mySQL 
 
 `https://boltapp.pythonanywhere.com/`
 
+This is the command output of running the migrations:
+
+```
+(.venv) 21:47 ~/Boltwise (main)$ flask --app bolt_app commands ingest sample_data/seller-a-20240625-csv-updated.csv
+Ingesting sample_data/seller-a-20240625-csv-updated.csv
+0
+/home/boltapp/Boltwise/bolt_app/utils.py:86: SAWarning: Object of type <Fastener> not in session, add operation along 'Seller.fasteners' will not proceed
+  db.session.commit()
+1
+2
+3
+4
+(.venv) 21:49 ~/Boltwise (main)$ flask --app bolt_app commands ingest sample_data/seller-b-20240625-csv-updated.csv
+Ingesting sample_data/seller-b-20240625-csv-updated.csv
+0
+/home/boltapp/Boltwise/bolt_app/utils.py:86: SAWarning: Object of type <Fastener> not in session, add operation along 'Seller.fasteners' will not proceed
+  db.session.commit()
+1
+2
+3
+4
+(.venv) 21:49 ~/Boltwise (main)$ flask --app bolt_app commands ingest sample_data/seller-a-20240727-csv-updated.csv
+Ingesting sample_data/seller-a-20240727-csv-updated.csv
+0
+/home/boltapp/Boltwise/bolt_app/utils.py:86: SAWarning: Object of type <Fastener> not in session, add operation along 'Seller.fasteners' will not proceed
+  db.session.commit()
+1
+2
+3
+4
+5
+(.venv) 21:49 ~/Boltwise (main)$
+```
+
 This allows requests like:
 
 `https://boltapp.pythonanywhere.com/fasteners?sort=finish:asc`
@@ -120,3 +154,7 @@ RESPONSE
   }
 ]
 ```
+
+# Data Analysis
+
+There is a Jupyter notebook in this folder called `exploratory_analysis.ipynb` where one may see how the initial analysis of csv data was done. This was done using pandas to ensure that future exploratory work is easy to accomplish.
