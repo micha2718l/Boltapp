@@ -8,17 +8,17 @@ class Fastener(db.Model):
 
     # Primary, neccessary fields
     id = db.Column(db.Integer, primary_key=True)
-    category = db.Column(db.String, nullable=False)
-    thread_size = db.Column(db.String, nullable=False)
-    material = db.Column(db.String, nullable=False)
-    finish = db.Column(db.String, nullable=False)
+    category = db.Column(db.String(80), nullable=False)
+    thread_size = db.Column(db.String(80), nullable=False)
+    material = db.Column(db.String(80), nullable=False)
+    finish = db.Column(db.String(80), nullable=False)
 
     # These two will be used together as a composite key for uniqueness
     seller_id = db.Column(db.Integer, db.ForeignKey("seller.id"), nullable=False)
-    external_sku = db.Column(db.String, nullable=True)
+    external_sku = db.Column(db.String(80), nullable=True)
 
     # Extra fields
-    description = db.Column(db.String, nullable=True)
+    description = db.Column(db.String(80), nullable=True)
     quantity = db.Column(db.Integer, nullable=True)
     price = db.Column(db.Float, nullable=True)
 
@@ -46,7 +46,7 @@ class Fastener(db.Model):
 
 class Seller(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, nullable=False)
+    name = db.Column(db.String(80), nullable=False)
     fasteners = db.relationship("Fastener", backref="seller", lazy=True)
 
     def to_dict(self):
