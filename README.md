@@ -2,6 +2,8 @@
 
 Python Flask app for the ingestion and serving of data concerning various fasteners sold by various sellers.
 
+This app was built as an exercise to showcase skills in building a backend app POC. Though there are many places to improve things, this repo is kept as is was built in the initial few hours assignment.
+
 # Setup
 
 The following is to be run from the Boltwise folder, one higher up than the bolt_app folder.
